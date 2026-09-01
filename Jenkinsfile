@@ -27,5 +27,12 @@ pipeline {
                 bat 'docker build -t ecommerce-ui .'
             }
         }
+
+        stage('Deploy') {
+    steps {
+        bat 'docker rm -f ecommerce-ui-container'
+        bat 'docker run -d --name ecommerce-ui-container -p 4200:80 ecommerce-ui'
+    }
+}
     }
 }
