@@ -1,0 +1,10 @@
+<h2>Products</h2>
+
+@for (p of products; track p.id) {
+  <div>
+    <p>ID: {{ p.id }}</p>
+    <p>Name: {{ p.name }}</p>
+    <p>Price: {{ p.price }}</p>
+    <hr>
+  </div>
+}
