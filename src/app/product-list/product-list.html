@@ -1,5 +1,7 @@
 <h2>Products</h2>
 
+<p>Total Products: {{ products.length }}</p>
+
 @for (p of products; track p.id) {
   <div>
     <p>ID: {{ p.id }}</p>
