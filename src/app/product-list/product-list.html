@@ -1,7 +1,7 @@
-<h2>Products</h2>
+<!-- <h2>Products</h2>
 
 <p>Total Products: {{ products.length }}</p>
-<p>Hello products </p>
+<p>Learned git webhook + jenkins + cicd</p>
 @for (p of products; track p.id) {
   <div>
     <p>ID: {{ p.id }}</p>
@@ -9,4 +9,39 @@
     <p>Price: {{ p.price }}</p>
     <hr>
   </div>
-}
+} -->
+
+<div class="page-wrapper">
+  <div class="hero">
+    <div class="floating-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+    <h1 class="hero-title">Our Products</h1>
+    <p class="hero-sub">{{ products.length }} items available</p>
+  </div>
+
+  <div class="grid">
+    @for (p of products; track p.id) {
+      <div class="card">
+        <div class="card-icon">
+          <div class="cube">
+            <div class="face front">{{ p.name[0] }}</div>
+            <div class="face back">{{ p.name[0] }}</div>
+            <div class="face left">{{ p.name[0] }}</div>
+            <div class="face right">{{ p.name[0] }}</div>
+            <div class="face top">{{ p.name[0] }}</div>
+            <div class="face bottom">{{ p.name[0] }}</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="badge">#{{ p.id }}</span>
+          <h3 class="card-name">{{ p.name }}</h3>
+          <p class="card-price">₹{{ p.price | number }}</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>
